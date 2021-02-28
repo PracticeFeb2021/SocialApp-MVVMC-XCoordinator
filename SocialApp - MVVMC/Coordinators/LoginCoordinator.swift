@@ -23,8 +23,7 @@ class LoginCoordinator: NavigationCoordinator<LoginRoute> {
         switch route {
         case .login:
             let vc = LoginVC.instantiateFromNib()
-            let viewModel = LoginViewModel(netService: NetworkManager(), loginRouter: unownedRouter,
-                                           appRouter: appRouter)
+            let viewModel = LoginViewModel(netService: NetworkManager(), loginRouter: unownedRouter, appRouter: appRouter)
             vc.viewModel = viewModel
             return .push(vc)
         }

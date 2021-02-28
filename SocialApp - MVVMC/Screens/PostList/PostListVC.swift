@@ -76,6 +76,6 @@ extension PostListVC: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView,
                    didSelectRowAt indexPath: IndexPath) {
-        viewModel.didSelectRow(at: indexPath)
+        viewModel.didSelectPost(at: indexPath.row)
     }
 }

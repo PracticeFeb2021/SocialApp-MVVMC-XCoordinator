@@ -20,7 +20,7 @@ protocol PostListViewModelP: class {
     
     func ready()
     
-    func didSelectRow(at indexPath: IndexPath)
+    func didSelectPost(at index: Int)
     
     func logoutButtonPressed()
 }
@@ -73,8 +73,8 @@ class PostListViewModel: PostListViewModelP {
         }
     }
     
-    func didSelectRow(at indexPath: IndexPath) {
-        let post = posts[indexPath.row]
+    func didSelectPost(at index: Int) {
+        let post = posts[index]
         router.trigger(.post(post))
     }
     
